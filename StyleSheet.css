@@ -1,0 +1,542 @@
+*{
+box-sizing: border-box;
+padding: 0px;
+margin: 0px;
+text-decoration: none;
+list-style-type: none;
+scroll-behavior: smooth;
+
+
+}
+
+@font-face {
+    font-family:setimo ;
+    src: url(../HTML1/Setimo.ttf);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald&family=Shadows+Into+Light&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
+body {
+    
+    background-color: rgb(0, 0, 0);
+    scroll-behavior: smooth;
+   
+}
+
+ 
+
+
+
+
+
+.slider{
+    box-shadow: 10px 10px 10px 10px rgba(153, 153, 153, 0);
+    width: 45%;
+    overflow: hidden;
+}
+.slides{
+    width: calc(730px*3);
+    animation: glisse 10s infinite;
+
+}
+
+.slide{
+    width: 730px;
+    height: auto;
+    float: left;
+   
+}
+
+@keyframes glisse {
+
+    0%{
+        transform: translateX(0);
+    }
+    10%{
+        transform: translateX(0);
+    }
+    33%{
+        transform: translateX(-730px);
+    }
+    43%{
+        transform: translateX(-730px);
+    }
+    66%{
+        transform: translateX(-1460px);
+    }
+    76%{
+        transform: translateX(-1460px);
+    }
+    76.1%{
+        transform: translateX(0);
+    }
+
+}
+
+/*--------------------------------Barre de navigation  ------------------
+    -Mise en forme de la barre de navigation (largeur, hauteur , couleur)
+    -Bloquer la position de la barre en haut de l'écran
+    -Mise en forme de la liste des boutons (espacement, flex )
+    -Mise en forme des bouttons ( taille de police, padding, lettre majuscule, couleur) 
+    -Boutton Hamburger pour menu réduit    
+
+
+
+*/
+
+
+.pageblocknavbar{
+    position: fixed;
+    width: 100%;
+    z-index: 3;
+
+}
+.navbar{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(68, 68, 68,0.9);
+    padding-left: 150px;
+    padding-right: 150px;
+
+}
+.navlist{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-between;
+    
+}
+
+.navitems {
+    font-size: 1.3rem;
+    
+
+    text-transform: uppercase;
+
+}
+
+.navitems a {
+    padding: 50px 20px 35px 20px;
+    color: white;
+   
+}
+.navitems a:hover{
+    color: white;
+     cursor: pointer;
+    background-color: rgb(255, 255, 255 , 0.5);
+}
+
+
+
+
+.hamburgerbutton{
+
+    position: absolute;
+    top: 0,7rem;
+    right: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 40px;
+    height: 30px;
+
+}
+
+.lignehamburger{
+    height: 3px;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+
+}
+
+
+
+/* ----------------------- Page block Header -------------------------------------------
+    - Mise en forme d'un container pour le texte et le caroussel de photos
+     -Mise en forme du texte ( police , couleur, taille )  
+    - Positionement du texte de description
+*/
+
+
+.pageblockheader{
+    
+    padding-top: 100px;
+    padding-left: 150px;
+    padding-right: 150px;
+    width: 100%;
+    justify-content: center ;
+    background-color: rgb(95, 95, 95);
+             
+}
+
+.containerheader{
+    
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 40px;
+    padding-bottom: 50px;
+    gap: 50px;
+
+
+}
+
+.cotetext{
+    color: rgb(255, 255, 255);
+    justify-content:  top ;
+    align-items: left;
+    line-height: 1.7;
+    width: 50%;
+
+}
+
+
+.descriptionmaison p{
+
+    line-height: 1.5;
+    font-size: 20px;
+    text-align: justify;
+
+}   
+
+
+/* ---------------------Page Block Galerie -------------------------------------------
+    -Mise en forme d'un container pour la galerie 
+    -Mise en forme de la galerie 
+    -Ajustement de la taille des photos pour la galerie 
+    -Effet quand le pointeur est sur l'image 
+    -Mise en forme titre de la section 
+*/
+
+
+
+.pageblock2{
+    
+    padding-left: 150px;
+    padding-right: 150px;
+    padding-bottom: 35px;
+    width: 100%;
+    justify-content: center ;
+    background-color: rgb(145, 145, 145);
+    
+    
+}
+
+.magalerie {
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0px;
+    align-items: center;
+    justify-content: center;
+    max-width: 1890px;
+    width: 100%;
+    flex-shrink: 0;
+}
+   
+
+.items{
+    
+    width: 400px;
+    height: 260px;
+    
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+
+.titresectiongalerie{
+    padding: 25px 0px 15px 0px;
+    font-size: 30px;
+    text-transform: uppercase;
+    color: white;
+    letter-spacing: 10px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+
+}
+.items img{
+    cursor: pointer;
+    width: 400px;
+    margin: 15px;
+    
+}
+
+img:hover{ 
+    opacity: 80%;
+    
+}
+
+.container{
+    
+    width: 100%;
+
+}
+
+
+
+
+/*-------------------------------------------- Différents styles et tailles de texte----------------------------------------------*/
+
+
+
+
+
+
+.titre p{
+    text-transform: uppercase;
+    justify-content: top;
+    padding-bottom: 20px;
+     font-size: 25px;
+     font-family: 'Indie Flower', cursive;
+    color: rgb(235, 235, 235);
+}
+
+
+
+
+/*-------------------Page Block Carte ----------------------------
+    -Mise en forme d'un container pour la section 
+    -Mise en forme d'un container pour la carte  et le texte 
+    -Ajustement sur la carte ( largeur , hauteur, padding)
+*/
+
+
+.pageblockcarte{
+    
+    padding-left:150px;
+    padding-right: 150px;
+    background-color: rgb(95, 95, 95);
+   
+
+}
+
+
+.containercarte{
+    width: 100%;
+    justify-content: center;
+  
+}
+.carte {
+    padding: 40px 0px 40px 0px ;
+    width: 50%;
+    height: 700px;
+ 
+}
+
+
+.titresection span{ 
+
+    content: "";
+    flex: 1 1 auto;
+    border-top: 1px solid #000;
+    
+  
+}
+
+.titresection{
+    padding: 25px 0px 0px 0px;
+    font-size: 30px;
+    text-transform: uppercase;
+    color: white;
+    letter-spacing: 10px;
+      overflow: hidden;
+    display: flex;
+    align-items: center;
+
+}
+
+.lignetitre {
+    border-top: 4px solid rgb(255, 255, 255);
+    flex-grow: 1;
+    margin: 0 10px 0px 0px ;
+}
+
+ .ligne2titre {
+    border-top: 4px solid rgb(255, 255, 255);
+    flex-grow: 1;
+    margin: 0 10px;
+}
+
+
+
+
+
+/*-------------------Page Block Calendar ----------------------------
+    -Mise en forme d'un container pour la section 
+    -Mise en forme d'un container pour l'agenda et le texte 
+    -Ajustement sur la l'agenda ( largeur , hauteur, padding)
+*/
+
+
+
+
+.pageblockcalendar{
+   
+    padding-left: 150px;
+    padding-right: 150px;
+    background-color: rgb(145, 145, 145);
+    align-items: center;
+}
+
+.containercalendar{
+    display: flex;
+    flex: wrap;
+    justify-content: center;
+    flex-direction: inline;
+    align-items: center;
+    gap: 50px;
+}
+
+.calendar{
+    display: block;
+    width: 50%;
+    height: 700px;
+    padding: 40px 0px 40px 0px;
+    border: none;
+    
+}
+
+.textcalendar{
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px ;
+
+}
+
+
+
+
+
+
+
+.text{
+    line-height: 1.5;
+    font-size: 20px;
+    text-align: justify;
+    color: white;
+    width: 100%;
+    font-size: 18px;
+    padding-bottom: 50px;
+}
+
+
+
+
+@media (max-width:1000px){
+
+    .hamburgerbutton{
+        display: flex;
+    }
+
+
+    .navlist{
+       
+     flex-direction: column ;
+    }
+
+    .navbar{
+        flex-direction: column;
+        align-items: flex-start;
+        height: auto;
+
+    }
+    .navitems a{
+        padding: 10px 10px 10px 10px;
+    }
+    .navitems {
+        padding: 10px 10px 10px 10px;
+    }
+    .navlist ul {
+        justify-content: left;
+        width: 100%;
+        flex-direction: column;
+    }
+    
+    .navbar li{
+        justify-content: left;
+        text-align: center;
+    }
+
+
+    .containercalendar{
+        
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        gap: 0px;
+    }
+    
+    .containercarte{
+        
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        gap: 0px;
+    }
+
+    .pageblockcalendar{
+        padding-left: 20px;
+        padding-right: 20px;  
+
+
+    }
+    .pageblockcarte{
+        padding-left: 20px;
+        padding-right: 20px;  
+
+
+    }
+    
+
+    .pageblockheader{
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+
+    .calendar{
+        padding-top: 0px;
+        width: 100%;
+    }
+
+    .carte{
+        width: 100%;
+        padding-bottom: 0px;
+    }
+
+    .cotetext{
+        width: 100%;
+    }
+
+    .slider{
+        width: 100%;
+    }
+
+    
+
+    .pageblock2{
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom:20px;
+              
+        
+    }
+
+    .textcalendar{
+     width: 100%;
+
+    }
+
+}   
+
